@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: pardon
+-- auth: Loraunt :: Modded by atom0s.
 -- desc: Pardons a player from jail. (Mordion Gaol)
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 3,
     parameters = "s"
 };
 

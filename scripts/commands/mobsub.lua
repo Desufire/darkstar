@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: mobsub
+-- auth: PrBlahBlahtson
 -- desc: Changes the sub-animation of the given mob. (For testing purposes.)
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ii"
 };
 

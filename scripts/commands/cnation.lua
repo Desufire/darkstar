@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @cnation <target> <campaign allegiance>
+-- auth: TeoTwawki
 -- desc: check or alter target characters campaign allegiance
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "si"
 };
 

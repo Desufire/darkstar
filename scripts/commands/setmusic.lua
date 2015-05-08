@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @setmusic <typeID> <songID>
+-- auth: TeoTwawki
 -- desc: Temporarily changes music played by users client
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ii"
 };
 

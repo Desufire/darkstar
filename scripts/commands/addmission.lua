@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @addmission <logID> <missionID> <player>
+-- auth: <Unknown>, modified by TeoTwawki
 -- desc: Adds a mission to the GM or target players log.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "iis"
 };
 

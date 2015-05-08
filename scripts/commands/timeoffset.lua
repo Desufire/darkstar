@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: timeoffset
+-- auth: Loraunt
 -- desc: Sets the custom time offset of the CVanaTime instance.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "i"
 };
 

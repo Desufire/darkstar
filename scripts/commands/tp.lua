@@ -1,12 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @tp <amount> <player>
+-- auth: <Unknown>, modified by TeoTwawki
 -- desc: Sets a players tp.
 -- current known issue: pet tp fails to be set
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "is"
 };
 

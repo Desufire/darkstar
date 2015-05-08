@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @delcurrency <currency type> <amount> <target player>
+-- auth: TeoTwawki
 -- desc: Removes the specified currency from the player
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "sis"
 };
 

@@ -2117,7 +2117,7 @@ function getRegimeInfo(regimeid)
                     a.el = 96;
                     return a;
                 elseif (regimeid == 710) then
-                    a.n1 = 4;
+                    a.n1 = 0;
                     a.n2 = 3;
                     a.n3 = 0;
                     a.n4 = 0;
@@ -2596,7 +2596,7 @@ function getRegimeInfo(regimeid)
                     return a;
                 elseif (regimeid == 770) then
                     a.n1 = 5;
-                    a.n2 = 2;
+                    a.n2 = 0;
                     a.n3 = 0;
                     a.n4 = 0;
                     a.sl = 100;

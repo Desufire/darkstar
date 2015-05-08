@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @completemission <logID> <missionID> <player>
+-- auth: <Unknown>, modified by TeoTwawki
 -- desc: Completes the given mission for the target player, if that mission is currently active.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "iis"
 };
 

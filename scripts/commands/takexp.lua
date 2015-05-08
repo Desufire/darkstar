@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @takexp <amount> <player>
+-- auth: TeoTwawki
 -- desc: Removes experience points from the target player.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 4,
     parameters = "is"
 };
 

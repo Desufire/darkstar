@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @completequest <logID> <questID> <player>
+-- auth: <Unknown>, modified by TeoTwawki
 -- desc: Completes the given quest for the GM or target player.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "iis"
 };
 

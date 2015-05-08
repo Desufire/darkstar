@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @setmerits <amount> <player>
+-- auth: Unknown (setmerits), Link (setplayermerits), merged by TeoTwawki
 -- desc: Sets the target players merit count.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "is"
 };
 

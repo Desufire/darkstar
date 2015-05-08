@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @setflag <flags> <target>
+-- auth: TeoTwawki (aka Forgottenandlost)
 -- desc: set arbitrary flags for testing
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ss"
 };
 

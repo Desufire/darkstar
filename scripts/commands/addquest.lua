@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @addquest <logID> <questID> <player>
+-- auth: <Unknown>, modified by TeoTwawki
 -- desc: Adds a quest to the given targets log.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "iis"
 };
 

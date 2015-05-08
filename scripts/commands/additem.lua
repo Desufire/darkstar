@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @additem <itemId> <quantity> <aug1> <v1> <aug2> <v2> <aug3> <v3> <aug4> <v4> <trial>
+-- auth: <Unknown>
 -- desc: Adds an item to the GMs inventory.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 3,
     parameters = "iiiiiiiiiii"
 };
 

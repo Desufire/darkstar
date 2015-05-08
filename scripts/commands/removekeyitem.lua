@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: removekeyitem
+-- auth: Link :: Modded by atom0s.
 -- desc: Removes a keyitem from the target.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "si"
 };
 

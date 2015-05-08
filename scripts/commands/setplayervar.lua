@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: setplayervar
+-- auth: Link, modified by TeoTwawki
 -- desc: Sets a variable on the target player.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ssi"
 };
 

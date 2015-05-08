@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @takegil <amount> <player>
+-- auth: TeoTwawki
 -- desc: Removes the amount of gil from the given player.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 4,
     parameters = "is"
 };
 

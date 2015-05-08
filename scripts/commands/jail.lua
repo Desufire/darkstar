@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: jail
+-- auth: Loraunt :: Modded by atom0s.
 -- desc: Sends the target player to jail. (Mordion Gaol)
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 3,
     parameters = "sis"
 };
 

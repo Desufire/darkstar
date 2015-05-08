@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: injectaction
+-- auth: <Unknown>
 -- desc: Injects an action packet with the specified action and animation id.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ii"
 };
 

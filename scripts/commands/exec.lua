@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: exec
+-- auth: atom0s
 -- desc: Allows you to execute a Lua string directly from chat.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 4,
+    permission = 5,
     parameters = "s"
 };
 

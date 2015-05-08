@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: animatenpc
+-- auth: PrBlahBlahtson
 -- desc: Changes the animation of the given npc. (For testing purposes.)
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 5,
     parameters = "ii"
 };
 

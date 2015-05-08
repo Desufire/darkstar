@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @addcurrency <currency type> <amount> <target player>
+-- auth: TeoTwawki
 -- desc: Adds the specified currency to the player
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 3,
     parameters = "sis"
 };
 

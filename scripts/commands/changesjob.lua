@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: changesjob
+-- auth: <Unknown> :: Modded by atom0s.
 -- desc: Changes the players current subjob.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 3,
     parameters = "si"
 };
 

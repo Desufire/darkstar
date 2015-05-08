@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: updateservermessage
+-- auth: <Unknown>
 -- desc: Updates the server message if it has been edited.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 4,
     parameters = ""
 };
 
