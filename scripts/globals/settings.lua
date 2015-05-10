@@ -54,15 +54,15 @@ WIN_FAME   = 10.000; -- Multiplies fame earned from Windurst quests.
 NORG_FAME  = 10.000; -- Multiplies fame earned from Norg and Tenshodo quests.
 JEUNO_FAME = 10.000; -- Multiplies fame earned from Jeuno quests.
 
-FISHING_GUILD_POINTS      = 3.000; -- Multiplies guild points earned from fishermans' guild trades.
-WOODWORKING_GUILD_POINTS  = 3.000; -- Multiplies guild points earned from carpenters' guild trades.
-SMITHING_GUILD_POINTS     = 3.000; -- Multiplies guild points earned from blacksmiths' guild trades.
-GOLDSMITHING_GUILD_POINTS = 3.000; -- Multiplies guild points earned from goldsmiths' guild trades.
-CLOTHCRAFT_GUILD_POINTS   = 3.000; -- Multiplies guild points earned from weavers' guild trades.
-LEATHERCRAFT_GUILD_POINTS = 3.000; -- Multiplies guild points earned from tanners' guild trades.
-BONECRAFT_GUILD_POINTS    = 3.000; -- Multiplies guild points earned from boneworkers' guild trades.
-ALCHEMY_GUILD_POINTS      = 3.000; -- Multiplies guild points earned from alchemists' guild trades.
-COOKING_GUILD_POINTS      = 3.000; -- Multiplies guild points earned from culinarians' guild trades.
+FISHING_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from fishermans' guild trades.
+WOODWORKING_GUILD_POINTS  = 5.000; -- Multiplies guild points earned from carpenters' guild trades.
+SMITHING_GUILD_POINTS     = 5.000; -- Multiplies guild points earned from blacksmiths' guild trades.
+GOLDSMITHING_GUILD_POINTS = 5.000; -- Multiplies guild points earned from goldsmiths' guild trades.
+CLOTHCRAFT_GUILD_POINTS   = 5.000; -- Multiplies guild points earned from weavers' guild trades.
+LEATHERCRAFT_GUILD_POINTS = 5.000; -- Multiplies guild points earned from tanners' guild trades.
+BONECRAFT_GUILD_POINTS    = 5.000; -- Multiplies guild points earned from boneworkers' guild trades.
+ALCHEMY_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from alchemists' guild trades.
+COOKING_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from culinarians' guild trades.
 DISABLE_GUILD_CONTRACTS   = 1; -- Set to 1 to disable guild contracts, allowing players to accumulate guild points from all guilds at once.
 
 CURE_POWER  = 2.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.

@@ -4,6 +4,7 @@
 --  Info from:
 --      http://wiki.ffxiclopedia.org/wiki/Crafts_%26_Hobbies
 -------------------------------------------------
+require("scripts/globals/settings");
 
 -- 1 2   : Alchemy
 -- 2 4   : Bonecraft

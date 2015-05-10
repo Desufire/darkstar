@@ -147,9 +147,11 @@ GearSets =  {{1, "Usukane",	16092,14554,14969,15633,15719,-1,-1,-1,-1,-1,-1,-1,-
   			 {53, "Brilliant",-1,-1,-1,-1,-1,-1,19272,-1,-1,-1,16006,-1,-1,-1,-1,2},					--  Brilliant Earring Set. Set Bonus: Evasion, HP Recovered while healing, Reduces Emnity. Active with any 2 items(Earring+Weapon)	
   			 {53, "Brilliant",-1,-1,-1,-1,-1,-1,19272,-1,-1,16006,-1,-1,-1,-1,-1,2},
 			 {53, "Brilliant",-1,-1,-1,-1,-1,-1,19272,-1,-1,16006,-1,-1,-1,-1,-1,2},
-			 {56, "Ocelomeh",10864,11863,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2},                     -- Ocelomeh Harness Set. Set Bonus: Triple Attack +3%. Active with any 2 items(Head+Body)
-			 {56, "Ocelomeh",10867,11869,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2}};                    -- Ocelomeh Harness Set. Set Bonus: Triple Attack +3%. Active with any 2 items(Head+Body)            
-			 -- Link: Next id must be 56.
+			 {56, "Ocelomeh",10864,11863,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1},                     -- Ocelomeh Harness Set. Set Bonus: Triple Attack +3%. Active with any 2 items(Head+Body)
+			 {56, "Ocelomeh",10867,11869,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1},                     -- Ocelomeh Harness Set. Set Bonus: Triple Attack +3%. Active with any 2 items(Head+Body)            
+             {57, "Mekira",10866,11865,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1},                       -- Mekira Toshugai											 Set. Set Bonus: Haste+8%. Active with any 2 pieces.
+             {57, "Mekira",10869,11871,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1}};         
+			 -- Link: Next id must be 58.
 			 
 -- 			 Head, Body, Hand, Legs, Feet, Main, Sub, Neck, Back, ear1, ear2, ring1, ring2, ranged, ammo, matches-required	
 	
@@ -257,7 +259,8 @@ function SearchMods(player, modNameId, name, matches)
 	if (name == "Iga" and matches > 4) then			ApplyMod(player, modNameId, MOD_EXTRA_DUAL_WIELD_ATTACK, extraAttackChance); return; end 	--  Iga Garb +2 Set. Set Bonus: Augments "Dual Wield". Attacks made while dual wielding occasionally add an extra attack
 	if (name == "Navarch" and matches > 4) then		ApplyMod(player, modNameId, MOD_QUICK_DRAW_TRIPLE_DAMAGE, extraDamageChance); return; end	--  Navarch's Attire +2 Set. Set Bonus: Augments "Quick Draw". Quick Draw will occasionally deal triple damage.
 	if (name == "Creed" and matches > 1) then		ApplyMod(player, modNameId, MOD_ABSORB_DMG_CHANCE, matches); return; end					--	Creed Armor +2 Set. Set Bonus: Occasionally absorbs damage taken. At least 2 peices needed. Each adds 1% (5% total)					
-	if (name == "Ocelomeh" and matches > 2) then    ApplyMod(player, modNameId, MOD_TRIPLE_ATTACK, 3); return; end                              --  Ocelomeh Harness Set. Set Bonus Triple Attack +3%
+	if (name == "Mekira" and matches > 1) then 	    ApplyMod(player, modNameId, MOD_HASTE_GEAR, 80); return; end		-- Mekira Toshugai Set. Set Bonus: Haste+8%. 2 peice set.
+	if (name == "Ocelomeh" and matches > 1) then    ApplyMod(player, modNameId, MOD_TRIPLE_ATTACK, 3); return; end                              --  Ocelomeh Harness Set. Set Bonus Triple Attack +3%
 	
 	--  Charis Attire +2 Set. Set Bonus: Augments "Samba". Occasionally doubles damage with Samba up. Adds approximately 1-2% per piece past the first. 
 	if (name == "Charis" and matches > 1) then
@@ -360,7 +363,7 @@ function SearchMods(player, modNameId, name, matches)
 	-- Set Bonus: Triple Attack +3% -- 2 pieces
 	if (name == "Ocelomeh" and matches > 1) then
 	    local modValue = 0;
-		if (matches == 2) then modValue = 3; end
+		if (matches == 1) then modValue = 3; end
 		ApplyMod(player, modNameId, MOD_TRIPLE_ATTACK, modValue)
 		return;
 	end	
