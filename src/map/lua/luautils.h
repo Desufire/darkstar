@@ -74,7 +74,7 @@ namespace luautils
     int32 isConquestAlliance(lua_State* L);
 	int32 SetRegionalConquestOverseers(uint8 regionID);							// Update NPC Conquest Guard
 	int32 setMobPos(lua_State*);												// set a mobs position (only if mob is not in combat)
-
+	
 	int32 getCorsairRollEffect(lua_State*);
     int32 getSpell(lua_State*);
 
@@ -197,7 +197,8 @@ namespace luautils
     int32 OnSpikesDamage(CBattleEntity* PDefender, CBattleEntity* PAttacker, apAction_t* Action, uint32 damage);                         // for mobs with spikes
 
     int32 nearLocation(lua_State*);
-
+	int32 isValidLS(lua_State*);
+	
     int32 OnPlayerLevelUp(CCharEntity* PChar);
     int32 OnPlayerLevelDown(CCharEntity* PChar);
 

@@ -1,0 +1,5 @@
+
+Memory manager: Memory leaks found at 2015/05/13 21h03m26s.
+0001 : d:\darkstar\src\login\login.cpp line 338 size 10 address 0x01FD2A5C
+0002 : d:\darkstar\src\login\login.cpp line 350 size 10 address 0x01FD2A7C
+0003 : d:\darkstar\src\login\login.cpp line 391 size 11 address 0x01FD2A9C

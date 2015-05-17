@@ -65,7 +65,6 @@ function onGameIn(player, firstlogin, zoning)
     if (player:getVar("GMHidden") == 1) then
         player:setGMHidden(true);
     end
-
 end;
 
 -----------------------------------
@@ -78,6 +77,12 @@ function CharCreate(player)
 	local leg = nil;
 	local hand = nil;
 	local feet = nil;
+	
+	if (isValidLS(("Caladbolg"))) then
+        if not(player:hasItem(515)) then
+            player:AddLinkpearl("Caladbolg");
+        end
+    end
 
 	-- ADD RACE SPECIFIC STARTGEAR
 	switch(race) : caseof
@@ -169,7 +174,7 @@ function CharCreate(player)
 		player:addItem(feet);
 		player:equipItem(feet);
 	end
-
+	
 	-- ADD JOB SPECIFIC STARTGEAR
 	switch(player:getMainJob()) : caseof
 	{
@@ -301,7 +306,7 @@ function CharCreate(player)
           player:addNationTeleport(1,10485760);
           player:addNationTeleport(2,10485760);
        end
-    end
+	end
     ----- End settings.lua Perks -----
 
 	-- SET START GIL

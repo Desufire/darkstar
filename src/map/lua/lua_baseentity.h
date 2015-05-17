@@ -76,7 +76,8 @@ public:
     {
         return m_PBaseEntity;
     }
-
+	
+	int32 AddLinkpearl(lua_State* L);		// Adds Pearl to new players automatically.
     int32 ChangeMusic(lua_State* L);        // Sets the specified music Track for specified music block.
 
     int32 warp(lua_State*);                 // Returns Character to home point

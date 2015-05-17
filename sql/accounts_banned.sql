@@ -37,6 +37,7 @@ CREATE TABLE `accounts_banned` (
 
 LOCK TABLES `accounts_banned` WRITE;
 /*!40000 ALTER TABLE `accounts_banned` DISABLE KEYS */;
+INSERT INTO `accounts_banned` VALUES (1024,'2015-05-15 01:14:09','2015-08-31 01:14:18','Disregard toward rules.'),(1015,'2015-05-15 01:23:36','2015-08-31 01:23:39','Disregard toward rules.');
 /*!40000 ALTER TABLE `accounts_banned` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-10  2:44:46
+-- Dump completed on 2015-05-17  7:31:35

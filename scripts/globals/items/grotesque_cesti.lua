@@ -31,6 +31,6 @@ function onAdditionalEffect(player,target,damage)
         end
 
         target:addHP(-drain);
-        return SUBEFFECT_HP_DRAIN, 162, player:addHP(drain);
+        return SUBEFFECT_HP_DRAIN, 161, player:addHP(drain);
     end
 end;
