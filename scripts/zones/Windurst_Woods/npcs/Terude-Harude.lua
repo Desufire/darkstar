@@ -24,8 +24,8 @@ end;
 
 function onTrigger(player,npc)
 	local guildMember = isGuildMember(player,3);
-    local SkillLevel = player:getSkillLevel(8);
-    local Cost = getAdvImageSupportCost(player,8);
+    local SkillLevel = player:getSkillLevel(SKILL_CLT);
+    local Cost = getAdvImageSupportCost(player,SKILL_CLT);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_CLOTHCRAFT_IMAGERY) == false) then
@@ -54,12 +54,12 @@ end;
 function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
-    local Cost = getAdvImageSupportCost(player,8);
+    local Cost = getAdvImageSupportCost(player,SKILL_CLT);
 
     if (csid == 0x271D and option == 1) then
         player:delGil(Cost);
         player:messageSpecial(IMAGE_SUPPORT,0,4,0);
-		player:addStatusEffect(EFFECT_CLOTHCRAFT_IMAGERY,3,0,480);
+		player:addStatusEffect(EFFECT_CLOTHCRAFT_IMAGERY,15,0,480);
     end
 end;
 

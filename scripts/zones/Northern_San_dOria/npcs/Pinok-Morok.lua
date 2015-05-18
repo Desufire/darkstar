@@ -24,8 +24,8 @@ end;
 
 function onTrigger(player,npc)
 	local guildMember = isGuildMember(player,8);
-    local SkillCap = getCraftSkillCap(player,256);
-    local SkillLevel = player:getSkillLevel(256);
+    local SkillCap = getCraftSkillCap(player,SKILL_SMT);
+    local SkillLevel = player:getSkillLevel(SKILL_SMT);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_SMITHING_IMAGERY) == false) then

@@ -24,8 +24,8 @@ end;
 
 function onTrigger(player,npc)
 	local guildMember = isGuildMember(player,2);
-    local SkillCap = getCraftSkillCap(player,4);
-    local SkillLevel = player:getSkillLevel(4);
+    local SkillCap = getCraftSkillCap(player,SKILL_BON);
+    local SkillLevel = player:getSkillLevel(SKILL_BON);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_BONECRAFT_IMAGERY) == false) then

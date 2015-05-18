@@ -24,8 +24,8 @@ end;
 
 function onTrigger(player,npc)
 	local guildMember = isGuildMember(player,4);
-    local SkillCap = getCraftSkillCap(player,16);
-    local SkillLevel = player:getSkillLevel(16);
+    local SkillCap = getCraftSkillCap(player,SKILL_COK);
+    local SkillLevel = player:getSkillLevel(SKILL_COK);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_COOKING_IMAGERY) == false) then

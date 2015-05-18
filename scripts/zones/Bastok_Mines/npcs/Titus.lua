@@ -23,8 +23,8 @@ end;
 
 function onTrigger(player,npc)
     local guildMember = isGuildMember(player,1);
-    local SkillCap = getCraftSkillCap(player,2);
-    local SkillLevel = player:getSkillLevel(2);
+    local SkillCap = getCraftSkillCap(player,SKILL_ALC);
+    local SkillLevel = player:getSkillLevel(SKILL_ALC);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_ALCHEMY_IMAGERY) == false) then

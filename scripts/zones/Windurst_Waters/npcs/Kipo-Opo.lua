@@ -24,8 +24,8 @@ end;
 
 function onTrigger(player,npc)
 	local guildMember = isGuildMember(player,4);
-    local SkillLevel = player:getSkillLevel(16);
-    local Cost = getAdvImageSupportCost(player,16);
+    local SkillLevel = player:getSkillLevel(SKILL_COK);
+    local Cost = getAdvImageSupportCost(player,SKILL_COK);
     
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_COOKING_IMAGERY) == false) then
@@ -54,12 +54,12 @@ end;
 function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
-    local Cost = getAdvImageSupportCost(player,16);
+    local Cost = getAdvImageSupportCost(player,SKILL_COK);
     
     if (csid == 0x271F and option == 1) then
         player:delGil(Cost);
         player:messageSpecial(COOKING_SUPPORT,0,8,0);
-		player:addStatusEffect(EFFECT_COOKING_IMAGERY,3,0,480);
+		player:addStatusEffect(EFFECT_COOKING_IMAGERY,15,0,480);
     end
 end;
 
