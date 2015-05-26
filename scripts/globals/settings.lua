@@ -45,20 +45,20 @@ ALL_MAPS = 1; -- Set to 1 to give starting characters all the maps.
 UNLOCK_OUTPOST_WARPS = 1; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE = 1.000; -- Multiplies prices in NPC shops.
-GIL_RATE   = 1.000; -- Multiplies gil earned from quests.  Won't always display in game.
-EXP_RATE   = 1.000; -- Multiplies exp earned from fov.
-TABS_RATE  = 1.000; -- Multiplies tabs earned from fov.
-SAN_FAME   = 1.000; -- Multiplies fame earned from San d'Oria quests.
-BAS_FAME   = 1.000; -- Multiplies fame earned from Bastok quests.
-WIN_FAME   = 1.000; -- Multiplies fame earned from Windurst quests.
-NORG_FAME  = 1.000; -- Multiplies fame earned from Norg and Tenshodo quests.
-JEUNO_FAME = 1.000; -- Multiplies fame earned from Jeuno quests.
+GIL_RATE   = 3.000; -- Multiplies gil earned from quests.  Won't always display in game.
+EXP_RATE   = 4.000; -- Multiplies exp earned from fov.
+TABS_RATE  = 2.000; -- Multiplies tabs earned from fov.
+SAN_FAME   = 10.000; -- Multiplies fame earned from San d'Oria quests.
+BAS_FAME   = 10.000; -- Multiplies fame earned from Bastok quests.
+WIN_FAME   = 10.000; -- Multiplies fame earned from Windurst quests.
+NORG_FAME  = 10.000; -- Multiplies fame earned from Norg and Tenshodo quests.
+JEUNO_FAME = 10.000; -- Multiplies fame earned from Jeuno quests.
 
-CURE_POWER  = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
-SPELL_POWER = 1.000; -- Multiplies damage dealt by Elemental and Divine Magic.
-BLUE_POWER  = 1.000; -- Multiplies damage dealt by most Blue Magic.
+CURE_POWER  = 1.500; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
+SPELL_POWER = 1.500; -- Multiplies damage dealt by Elemental and Divine Magic.
+BLUE_POWER  = 1.500; -- Multiplies damage dealt by most Blue Magic.
 DRAIN_POWER = 3.000; -- Multiplies amount drained by Drain, Aspir, and relevant Blue Magic spells.
-ITEM_POWER  = 1.000; -- Multiplies the effect of items such as Potions and Ethers.
+ITEM_POWER  = 1.500; -- Multiplies the effect of items such as Potions and Ethers.
 WEAPON_SKILL_POWER  = 1.000; -- Multiplies damage dealt by Weapon Skills.
 WEAPON_SKILL_POINTS = 3.000; -- Multiplies points earned during weapon unlocking.
 USE_ADOULIN_WEAPON_SKILL_CHANGES = false; -- true/false. Change to toggle new Adoulin weapon skill damage calculations
@@ -115,7 +115,7 @@ LOW_LEVEL_REGIME = 0; --Allow people to kill regime targets even if they give no
 GROUNDS_TOMES = 1; -- Enables Grounds of Valor tomes
 
 -- JOB ABILITY/TRAIT SPECIFIC SETTINGS
-SCAVENGE_RATE = 0.1; --The chance of obtaining an item when you use the Ranger job ability Scavenge.  Do not set above 1!
+SCAVENGE_RATE = 0.80; --The chance of obtaining an item when you use the Ranger job ability Scavenge.  Do not set above 1!
 CIRCLE_KILLER_EFFECT = 20; -- Intimidation percentage granted by circle effects. (made up number)
 KILLER_EFFECT = 10; -- Intimidation percentage from killer job traits.
 
