@@ -5705,6 +5705,7 @@ inline int32 CLuaBaseEntity::equipItem(lua_State *L)
         PItem = (CItemArmor*)PChar->getStorage(containerID)->GetItem(SLOT);
         charutils::EquipItem(PChar, SLOT, PItem->getSlotType(), containerID);
         charutils::SaveCharEquip(PChar);
+        charutils::SaveCharLook(PChar);
     }
     return 0;
 }
