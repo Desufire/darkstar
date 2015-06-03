@@ -55,9 +55,9 @@ function onMobFight(mob,target)
 
 	-- Khimera + Puks (20k HP)
 	if(mobHP < 20000 and mobSkin <= 13) then
-		mob:changeSkin(14);
+		mob:SetNewSkin(14);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(22);
+			GetMobByID(petIDs[i]):SetNewSkin(22);
 			if petStatus[i] == 0 then -- Dead pet, get it up.
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -65,9 +65,9 @@ function onMobFight(mob,target)
 
 	-- Hydra + Dahaks (20k HP)
 	elseif(mobHP < 40000 and mobSkin <= 12) then
-		mob:changeSkin(13);
+		mob:SetNewSkin(13);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(21);
+			GetMobByID(petIDs[i]):SetNewSkin(21);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -75,9 +75,9 @@ function onMobFight(mob,target)
 
 	-- Cerberus + Bombs (20k HP)
 	elseif(mobHP < 60000 and mobSkin <= 11) then
-		mob:changeSkin(12);
+		mob:SetNewSkin(12);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(20);
+			GetMobByID(petIDs[i]):SetNewSkin(20);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -85,9 +85,9 @@ function onMobFight(mob,target)
 
 	-- Gurfurlur the Menacing + Trolls (15k hp)
 	elseif(mobHP < 75000 and mobSkin <= 10) then
-		mob:changeSkin(11);
+		mob:SetNewSkin(11);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(19);
+			GetMobByID(petIDs[i]):SetNewSkin(19);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -96,9 +96,9 @@ function onMobFight(mob,target)
 	-- Medusa + Lamia / Merrows (15k hp)
 	-- Reports of RNG x2, BLM x1, RDM x2, and SAMx1, instead of all the same.  Needs to be researched and possibly corrected.
 	elseif(mobHP < 90000 and mobSkin <= 9) then
-		mob:changeSkin(10);
+		mob:SetNewSkin(10);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(18);
+			GetMobByID(petIDs[i]):SetNewSkin(18);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -106,9 +106,9 @@ function onMobFight(mob,target)
 
 	-- Gulool Ja Ja + Mamool Ja (15k hp)
 	elseif(mobHP < 105000 and mobSkin <= 8) then
-		mob:changeSkin(9);
+		mob:SetNewSkin(9);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(17);
+			GetMobByID(petIDs[i]):SetNewSkin(17);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -116,9 +116,9 @@ function onMobFight(mob,target)
 
 	-- Long-Bowed Chariot + Gear Trios (10k hp)
 	elseif(mobHP < 115000 and mobSkin <= 7) then
-		mob:changeSkin(8);
+		mob:SetNewSkin(8);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(16);
+			GetMobByID(petIDs[i]):SetNewSkin(16);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -126,9 +126,9 @@ function onMobFight(mob,target)
 
 	-- Armored Chariot + Gear Trios (10k hp)
 	elseif(mobHP < 125000 and mobSkin <= 6) then
-		mob:changeSkin(7);
+		mob:SetNewSkin(7);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(16);
+			GetMobByID(petIDs[i]):SetNewSkin(16);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -136,9 +136,9 @@ function onMobFight(mob,target)
 
 	-- Battleclad Chariot + Gear Trios (10k hp)
 	elseif(mobHP < 135000 and mobSkin <= 5) then
-		mob:changeSkin(6);
+		mob:SetNewSkin(6);
 		for i = 1, 8 do
-			GetMobByID(petIDs[i]):changeSkin(16);
+			GetMobByID(petIDs[i]):SetNewSkin(16);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -146,10 +146,10 @@ function onMobFight(mob,target)
 
 	-- Long-Armed Chariot + Gear Trios (10k hp)
 	elseif(mobHP < 145000 and mobSkin == 15) then
-		mob:changeSkin(5);
+		mob:SetNewSkin(5);
 		for i = 1, 8 do
 			
-			GetMobByID(petIDs[i]):changeSkin(16);
+			GetMobByID(petIDs[i]):SetNewSkin(16);
 			if petStatus[i] == 0 then
 				SpawnMob(petIDs[i]):updateEnmity(target);
 			end
@@ -157,7 +157,7 @@ function onMobFight(mob,target)
 
 	-- Reverts back to Pandemonium Warden form (is this correct behavior?)
 	elseif(mobHP > 145000 and mobSkin ~= 15) then
-		mob:changeSkin(15);
+		mob:SetNewSkin(15);
 	end
 
 
@@ -193,7 +193,7 @@ function onMobFight(mob,target)
 		for i=17056178, 17056186 do
 			local rannum = math.random(0,7);
 			local avatar = GetMobByID(i);
-			avatar:changeSkin(23 + rannum); -- Random avatar skin
+			avatar:SetNewSkin(23 + rannum); -- Random avatar skin
 			SpawnMob(i):updateEnmity(target);
 			avatar:useMobAbility(656);
 			DespawnMob(i);
@@ -214,7 +214,7 @@ function onMobFight(mob,target)
 		for i=17056178, 17056186 do
 			local rannum = math.random(0,7);
 			local avatar = GetMobByID(i);
-			avatar:changeSkin(23 + rannum); -- Random avatar skin
+			avatar:SetNewSkin(23 + rannum); -- Random avatar skin
 			SpawnMob(i):updateEnmity(target);
 			avatar:useMobAbility(656);
 			DespawnMob(i);
@@ -224,7 +224,7 @@ function onMobFight(mob,target)
 		for i=17056178, 17056186 do
 			local rannum = math.random(0,7);
 			local avatar = GetMobByID(i);
-			avatar:changeSkin(23 + rannum); -- Random avatar skin
+			avatar:SetNewSkin(23 + rannum); -- Random avatar skin
 			SpawnMob(i):updateEnmity(target);
 			avatar:useMobAbility(656);
 			DespawnMob(i);

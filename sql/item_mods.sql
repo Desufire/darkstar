@@ -1052,6 +1052,23 @@ INSERT INTO `item_mods` VALUES (10455, 73, 8); -- "Store TP"+8
 INSERT INTO `item_mods` VALUES (10455, 289, 10); -- "Subtle Blow"+10
 
 -- -------------------------------------------------------
+-- Avant Mail
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10456, 1, 66);
+INSERT INTO `item_mods` VALUES (10456, 2, 20);
+INSERT INTO `item_mods` VALUES (10456, 8, 9);
+INSERT INTO `item_mods` VALUES (10456, 23, 15);
+
+-- -------------------------------------------------------
+-- Avant Mail +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10457, 1, 67);
+INSERT INTO `item_mods` VALUES (10457, 2, 25);
+INSERT INTO `item_mods` VALUES (10457, 8, 10);
+INSERT INTO `item_mods` VALUES (10457, 23, 20);
+INSERT INTO `item_mods` VALUES (10457, 288, 30);
+
+-- -------------------------------------------------------
 -- Kacura Harness
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10458, 1, 62);
@@ -1300,12 +1317,49 @@ INSERT INTO `item_mods` VALUES (10493, 384, 40); -- Haste+4%
 INSERT INTO `item_mods` VALUES (10500, 73, 10);
 
 -- -------------------------------------------------------
+-- Brego Gloves
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10503, 1, 26); -- DEF:26
+INSERT INTO `item_mods` VALUES (10503, 11, 5); -- AGI+5
+INSERT INTO `item_mods` VALUES (10503, 8, 5); -- STR+5
+INSERT INTO `item_mods` VALUES (10503, 25, 9); -- Acc+9
+INSERT INTO `item_mods` VALUES (10503, 384, 40); -- Haste +4%
+
+-- -------------------------------------------------------
+-- Iuvenalis Mittens
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10504, 1, 20); -- DEF:20
+INSERT INTO `item_mods` VALUES (10504, 5, -15);
+INSERT INTO `item_mods` VALUES (10504, 8, 7); -- STR+7
+INSERT INTO `item_mods` VALUES (10504, 10, 7);
+INSERT INTO `item_mods` VALUES (10504, 13, 7);
+INSERT INTO `item_mods` VALUES (10504, 288, 30); -- "Double Attack"+3%
+INSERT INTO `item_mods` VALUES (10504, 384, 50); -- Haste+5%
+
+-- -------------------------------------------------------
 -- Nomkahpa Mittens
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10505, 1, 28); -- DEF:28
 INSERT INTO `item_mods` VALUES (10505, 8, 5); -- STR+5
 INSERT INTO `item_mods` VALUES (10505, 288, 3); -- "Double Attack"+3%
 INSERT INTO `item_mods` VALUES (10505, 384, 30); -- Haste+3%
+
+-- -------------------------------------------------------
+-- Avant Gauntlets
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10506, 1, 30); -- 
+INSERT INTO `item_mods` VALUES (10506, 8, 6); -- 
+INSERT INTO `item_mods` VALUES (10506, 9, 6); --  
+INSERT INTO `item_mods` VALUES (10506, 25, 5); -- 
+
+-- -------------------------------------------------------
+-- Avant Gauntlets +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10507, 1, 31); -- DEF:31
+INSERT INTO `item_mods` VALUES (10507, 8, 7); -- STR+7
+INSERT INTO `item_mods` VALUES (10507, 288, 20); -- "Double Attack"+2%
+INSERT INTO `item_mods` VALUES (10507, 9, 7); -- DEX+7
+INSERT INTO `item_mods` VALUES (10507, 25, 10); -- Accuracy +10
 
 INSERT INTO `item_mods` VALUES (10552, 73, 2);
 INSERT INTO `item_mods` VALUES (10562, 374, 3);
@@ -1332,6 +1386,30 @@ INSERT INTO `item_mods` VALUES (10595, 1, 2); -- def 2
 -- Decennial Hose +1
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10596, 1, 2); -- def 2
+
+-- ------------------------------------------
+-- Scopuli Nails
+-- ------------------------------------------
+INSERT INTO `item_mods` VALUES (10603, 1, 23);
+INSERT INTO `item_mods` VALUES (10603, 9, 10);
+INSERT INTO `item_mods` VALUES (10603, 11, 10);
+
+-- ------------------------------------------
+-- Avant Leggings
+-- ------------------------------------------
+INSERT INTO `item_mods` VALUES (10604, 1, 24);
+INSERT INTO `item_mods` VALUES (10604, 8, 5);
+INSERT INTO `item_mods` VALUES (10604, 11, 5);
+INSERT INTO `item_mods` VALUES (10604, 68, 7);
+
+-- ------------------------------------------
+-- Avant Leggings +1
+-- ------------------------------------------
+INSERT INTO `item_mods` VALUES (10605, 1, 25);
+INSERT INTO `item_mods` VALUES (10605, 8, 6);
+INSERT INTO `item_mods` VALUES (10605, 11, 6);
+INSERT INTO `item_mods` VALUES (10605, 68, 10);
+INSERT INTO `item_mods` VALUES (10605, 288, 10);
 
 INSERT INTO `item_mods` VALUES (10635, 374, 1);
 INSERT INTO `item_mods` VALUES (10640, 374, 4);
@@ -1446,6 +1524,42 @@ INSERT INTO `item_mods` VALUES (10819, 161, -4);
 INSERT INTO `item_mods` VALUES (10819, 516, 2);
 
 -- -------------------------------------------------------
+-- Witful Belt
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10826, 1, 8); -- Def:8
+INSERT INTO `item_mods` VALUES (10826, 407, 2); -- Fast Cast
+INSERT INTO `item_mods` VALUES (10826, 384, 30); -- Haste
+  -- TODO INSERT INTO `item_mods` VALUES (10826, 288, -5); -- Occ Quicken spellcasting
+
+-- -------------------------------------------------------
+-- Prosilio Belt
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10827, 1, 9); -- Def:9
+INSERT INTO `item_mods` VALUES (10827, 8, 9); -- STR+9
+INSERT INTO `item_mods` VALUES (10827, 23, 25); -- ATT+25
+INSERT INTO `item_mods` VALUES (10827, 288, -5); -- Double Attack -5%
+
+-- -------------------------------------------------------
+-- Windbuffet Belt
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10828, 1, 7); -- Def:7
+INSERT INTO `item_mods` VALUES (10828, 302, 20); -- Triple Attack +2%
+INSERT INTO `item_mods` VALUES (10828, 430, 10); -- Quad Attack +1%
+
+-- -------------------------------------------------------
+-- Artful Belt
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10829, 1, 10); -- Def:10
+INSERT INTO `item_mods` VALUES (10829, 9, 9); -- DEX
+INSERT INTO `item_mods` VALUES (10829, 11, -7); -- AGI
+
+-- -------------------------------------------------------
+-- Artful Belt +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10830, 1, 11); -- Def:10
+INSERT INTO `item_mods` VALUES (10830, 9, 10); -- DEX
+
+-- -------------------------------------------------------
 -- Ocelomeh Headpiece
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10864, 1, 31); -- Def:31
@@ -1512,15 +1626,67 @@ INSERT INTO `item_mods` VALUES (10875, 1, 1); -- DEF:1
 INSERT INTO `item_mods` VALUES (10875, 54, -12); -- [Element: Fire]-12
 INSERT INTO `item_mods` VALUES (10875, 55, 12); -- [Element: Ice]+12
 
+-- -------------------------------------------------------
+-- Praeco Beret
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10879, 1, 42);
+INSERT INTO `item_mods` VALUES (10879, 8, 10);
 INSERT INTO `item_mods` VALUES (10879, 73, 7);
+INSERT INTO `item_mods` VALUES (10879, 242, 5);
 
 -- -------------------------------------------------------
 -- Praeco Beret
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (10880, 1, 27); -- DEF:1
+INSERT INTO `item_mods` VALUES (10880, 1, 27); -- DEF:27
 INSERT INTO `item_mods` VALUES (10880, 14, 7);
 INSERT INTO `item_mods` VALUES (10880, 30, 3);
 INSERT INTO `item_mods` VALUES (10880, 455, -5);
+
+-- -------------------------------------------------------
+-- Brego Helm
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10881, 1, 32); -- DEF:32
+INSERT INTO `item_mods` VALUES (10881, 8, 6);
+INSERT INTO `item_mods` VALUES (10881, 9, 6);
+INSERT INTO `item_mods` VALUES (10881, 384, 5);
+INSERT INTO `item_mods` VALUES (10881, 289, 4);
+
+-- -------------------------------------------------------
+-- Smilodon Mask
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10882, 1, 35); -- DEF:35
+INSERT INTO `item_mods` VALUES (10882, 2, 25);
+INSERT INTO `item_mods` VALUES (10882, 8, 8);
+INSERT INTO `item_mods` VALUES (10882, 10, 8);
+INSERT INTO `item_mods` VALUES (10882, 107, 10);
+INSERT INTO `item_mods` VALUES (10882, 291, 3);
+
+-- -------------------------------------------------------
+--  Gallian Helm
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10883, 1, 43); -- DEF:43
+INSERT INTO `item_mods` VALUES (10883, 2, 55);
+INSERT INTO `item_mods` VALUES (10883, 8, 13);
+INSERT INTO `item_mods` VALUES (10883, 10, 13);
+INSERT INTO `item_mods` VALUES (10883, 20, 20);
+INSERT INTO `item_mods` VALUES (10883, 25, -20);
+
+-- -------------------------------------------------------
+--  Avant Helm
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10884, 1, 41); -- DEF:41
+INSERT INTO `item_mods` VALUES (10884, 8, 4);
+INSERT INTO `item_mods` VALUES (10884, 23, 13);
+INSERT INTO `item_mods` VALUES (10884, 10, 2);
+
+-- -------------------------------------------------------
+--  Avant Helm +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10885, 1, 42); -- DEF:42
+INSERT INTO `item_mods` VALUES (10885, 8, 5);
+INSERT INTO `item_mods` VALUES (10885, 23, 15);
+INSERT INTO `item_mods` VALUES (10885, 10, 3);
+INSERT INTO `item_mods` VALUES (10885, 288, 20);
 
 INSERT INTO `item_mods` VALUES (10914, 1, 6);
 INSERT INTO `item_mods` VALUES (10914, 27, 2);
@@ -2909,6 +3075,14 @@ INSERT INTO `item_mods` VALUES (11459, 25, 8);
 INSERT INTO `item_mods` VALUES (11459, 292, 3);
 INSERT INTO `item_mods` VALUES (11459, 289, 8);
 INSERT INTO `item_mods` VALUES (11459, 384, 20);
+
+-- ------------------------------------------
+-- Gigantes Boots
+-- ------------------------------------------
+INSERT INTO `item_mods` VALUES (11462, 1, 25);
+INSERT INTO `item_mods` VALUES (11462, 8, 11);
+INSERT INTO `item_mods` VALUES (11462, 9, -5);
+INSERT INTO `item_mods` VALUES (11462, 10, -5);
 
 INSERT INTO `item_mods` VALUES (11464, 1, 24);
 INSERT INTO `item_mods` VALUES (11464, 5, 25);
@@ -4315,6 +4489,33 @@ INSERT INTO `item_mods` VALUES (11972, 5, 20);
 INSERT INTO `item_mods` VALUES (11972, 407, 3);
 INSERT INTO `item_mods` VALUES (11972, 374, 4);
 INSERT INTO `item_mods` VALUES (11972, 27, -8);
+
+-- -------------------------------------------------------
+--  Hidalgo Slops
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11973, 1, 44);
+INSERT INTO `item_mods` VALUES (11973, 13, 7);
+INSERT INTO `item_mods` VALUES (11973, 14, 7);
+INSERT INTO `item_mods` VALUES (11973, 114, 10);
+INSERT INTO `item_mods` VALUES (11973, 119, 5);
+INSERT INTO `item_mods` VALUES (11973, 384, 20);
+
+-- -------------------------------------------------------
+--  Avant Cuisses
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11974, 1, 50);
+INSERT INTO `item_mods` VALUES (11974, 8, 7);
+INSERT INTO `item_mods` VALUES (11974, 2, 20);
+INSERT INTO `item_mods` VALUES (11974, 23, 10);
+
+-- -------------------------------------------------------
+--  Avant Cuisses +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11975, 1, 51);
+INSERT INTO `item_mods` VALUES (11975, 2, 25);
+INSERT INTO `item_mods` VALUES (11975, 8, 8);
+INSERT INTO `item_mods` VALUES (11975, 23, 15);
+INSERT INTO `item_mods` VALUES (11975, 288, 20);
 
 INSERT INTO `item_mods` VALUES (11982, 374, 4);
 
@@ -16044,7 +16245,17 @@ INSERT INTO `item_mods` VALUES (15822, 147, 1);
 INSERT INTO `item_mods` VALUES (15823, 148, 1);
 INSERT INTO `item_mods` VALUES (15824, 149, 1);
 INSERT INTO `item_mods` VALUES (15825, 150, 1);
-INSERT INTO `item_mods` VALUES (15826, 151, 1);
+INSERT INTO `item_mods` VALUES (15826, 127, 100);
+INSERT INTO `item_mods` VALUES (15826, 128, 100);
+INSERT INTO `item_mods` VALUES (15826, 129, 100);
+INSERT INTO `item_mods` VALUES (15826, 130, 100);
+INSERT INTO `item_mods` VALUES (15826, 131, 100);
+INSERT INTO `item_mods` VALUES (15826, 132, 100);
+INSERT INTO `item_mods` VALUES (15826, 133, 100);
+INSERT INTO `item_mods` VALUES (15826, 134, 100);
+INSERT INTO `item_mods` VALUES (15826, 135, 100);
+INSERT INTO `item_mods` VALUES (15826, 136, 100);
+INSERT INTO `item_mods` VALUES (15826, 137, 100);
 INSERT INTO `item_mods` VALUES (15827, 30, 2);
 INSERT INTO `item_mods` VALUES (15827, 241, 2);
 INSERT INTO `item_mods` VALUES (15827, 244, 2);
@@ -21133,6 +21344,14 @@ INSERT INTO `item_mods` VALUES (20784, 23, 9); -- Attack+9
 INSERT INTO `item_mods` VALUES (20784, 29, 5); -- "Magic Def. Bonus"+5
 
 -- -------------------------------------------------------
+-- Yoichinoyumi (99) (Afterglow)
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (21211, 24, 30);
+INSERT INTO `item_mods` VALUES (21211, 26, 40);
+INSERT INTO `item_mods` VALUES (21211, 104, 242);
+INSERT INTO `item_mods` VALUES (21211, 355, 200);
+
+-- -------------------------------------------------------
 -- Matre Bell
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21460, 5, 5); -- MP+5
@@ -21508,6 +21727,12 @@ INSERT INTO `item_mods` VALUES (28465, 384, 102); -- Haste+10%
 -- Slime Earring
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (28511, 2, 1); -- HP+1
+
+-- -------------------------------------------------------
+-- Friomisi Earring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (28514, 27, 2);
+INSERT INTO `item_mods` VALUES (28514, 28, 10);
 
 -- -------------------------------------------------------
 -- Steelflash Earring
