@@ -1,8 +1,8 @@
 -----------------------------------
---  Area: Windurst Woods
+-- Area: Windurst Woods
 --  NPC:  Lih Pituu
---  Type: Bonecraft Adv. Image Support
---  @pos -5.471 -6.25 -141.211 241
+-- Type: Bonecraft Adv. Image Support
+-- @pos -5.471 -6.25 -141.211 241
 -----------------------------------
 package.loaded["scripts/zones/Windurst_Woods/TextIDs"] = nil;
 -----------------------------------
@@ -16,35 +16,35 @@ require("scripts/globals/crafting");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	local guildMember = isGuildMember(player,2);
-    local SkillLevel = player:getSkillLevel(SKILL_BON);
-    local Cost = getAdvImageSupportCost(player,SKILL_BON);
-    
+    local guildMember = isGuildMember(player,2);
+    local SkillLevel = player:getSkillLevel(SKILL_BONECRAFT);
+    local Cost = getAdvImageSupportCost(player,SKILL_BONECRAFT);
+
     if (guildMember == 1) then
         if (player:hasStatusEffect(EFFECT_BONECRAFT_IMAGERY) == false) then
-			player:startEvent(0x2722,Cost,SkillLevel,0,511,player:getGil(),0,7028,0);
-	    else
+            player:startEvent(0x2722,Cost,SkillLevel,0,511,player:getGil(),0,7028,0);
+        else
             player:startEvent(0x2722,Cost,SkillLevel,0,511,player:getGil(),28753,3967,0);
-	    end
-	else
+        end
+    else
         player:startEvent(0x2722); -- Standard Dialogue
-	end
-end; 
+    end
+end;
 
 -----------------------------------
 -- onEventUpdate
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -54,7 +54,7 @@ end;
 function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
-    local Cost = getAdvImageSupportCost(player,SKILL_BON);
+    local Cost = getAdvImageSupportCost(player,SKILL_BONECRAFT);
     
     if (csid == 0x2722 and option == 1) then
         player:delGil(Cost);
