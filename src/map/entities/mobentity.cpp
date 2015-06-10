@@ -87,7 +87,7 @@ CMobEntity::CMobEntity()
 	m_battlefieldID = 0;
     m_bcnmID = 0;
 
-    m_maxRoamDistance = 1.5f;
+    m_maxRoamDistance = 1.0f;
     m_roamDistance = 0.5f;
     m_disableScent = false;
 
