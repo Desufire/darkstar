@@ -100,3 +100,12 @@ function utils.thirdeye(target)
 
     return false;
 end;
+
+-- Check if ID exists in a table
+function utils.inTable(table, element)
+    for aire, value in pairs(table) do -- "My life for Aire." /suchanerd
+        if (value == element) then
+            return true
+        end
+    end
+    return false

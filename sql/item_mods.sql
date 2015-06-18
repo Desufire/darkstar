@@ -1461,6 +1461,14 @@ INSERT INTO `item_mods` VALUES (10721, 68, 8);
 INSERT INTO `item_mods` VALUES (10721, 508, 25);
 
 INSERT INTO `item_mods` VALUES (10738, 364, 30);
+
+-- -------------------------------------------------------
+-- Prolix Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10752, 5, 20);
+INSERT INTO `item_mods` VALUES (10752, 27, -3);
+INSERT INTO `item_mods` VALUES (10752, 407, 2);
+
 INSERT INTO `item_mods` VALUES (10753, 370, 2);
 INSERT INTO `item_mods` VALUES (10764, 370, 1);
 INSERT INTO `item_mods` VALUES (10787, 375, 3);
@@ -1522,6 +1530,13 @@ INSERT INTO `item_mods` VALUES (10816, 402, 5);
 INSERT INTO `item_mods` VALUES (10819, 1, 12);
 INSERT INTO `item_mods` VALUES (10819, 161, -4);
 INSERT INTO `item_mods` VALUES (10819, 516, 2);
+
+-- -------------------------------------------------------
+-- Harfner's Sash
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10822, 1, 5);
+INSERT INTO `item_mods` VALUES (10822, 120, 5);
+INSERT INTO `item_mods` VALUES (10822, 121, 5);
 
 -- -------------------------------------------------------
 -- Witful Belt
@@ -1776,6 +1791,13 @@ INSERT INTO `item_mods` VALUES (10953, 133, 2); -- Bonecraft skill +2
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10954, 134, 2); -- Alchemy skill +2
 
+-- -------------------------------------------------------
+-- Stoicheion Medal
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10957, 30, 2);
+INSERT INTO `item_mods` VALUES (10957, 28, 8);
+INSERT INTO `item_mods` VALUES (10957, 407, 3);
+
 INSERT INTO `item_mods` VALUES (10960, 374, 4);
 INSERT INTO `item_mods` VALUES (10960, 375, 4);
 INSERT INTO `item_mods` VALUES (10964, 1, 9);
@@ -1818,11 +1840,37 @@ INSERT INTO `item_mods` VALUES (10974, 31, 5);
 -- INSERT INTO `item_mods` VALUES (10974, ???, -1); TODO: Ninjutsu Recast
 
 -- -------------------------------------------------------
+-- Kaikias' Cape
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10976, 1, 7);
+INSERT INTO `item_mods` VALUES (10976, 12, 6);
+INSERT INTO `item_mods` VALUES (10976, 13, 6);
+INSERT INTO `item_mods` VALUES (10976, 34, 4);
+INSERT INTO `item_mods` VALUES (10976, 42, 4);
+
+-- -------------------------------------------------------
+-- Romanus Cape
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10977, 1, 8);
+INSERT INTO `item_mods` VALUES (10977, 12, 4);
+INSERT INTO `item_mods` VALUES (10977, 28, 4);
+INSERT INTO `item_mods` VALUES (10977, 30, -6);
+INSERT INTO `item_mods` VALUES (10977, 407, -6);
+
+-- -------------------------------------------------------
 -- Misuuchi Kappa
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10978, 1, 12);
 INSERT INTO `item_mods` VALUES (10978, 73, 3);
 INSERT INTO `item_mods` VALUES (10978, 288, 3);
+
+-- -------------------------------------------------------
+-- Balladeer's Cape
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (10979, 1, 8);
+INSERT INTO `item_mods` VALUES (10979, 14, 9);
+INSERT INTO `item_mods` VALUES (10979, 121, 6);
+
 
 -- -------------------------------------------------------
 -- Mollusca Mantle
@@ -4516,6 +4564,23 @@ INSERT INTO `item_mods` VALUES (11975, 2, 25);
 INSERT INTO `item_mods` VALUES (11975, 8, 8);
 INSERT INTO `item_mods` VALUES (11975, 23, 15);
 INSERT INTO `item_mods` VALUES (11975, 288, 20);
+
+-- -------------------------------------------------------
+-- Sweven Slacks
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11978, 1, 40);
+INSERT INTO `item_mods` VALUES (11978, 12, 7);
+INSERT INTO `item_mods` VALUES (11978, 13, 7);
+INSERT INTO `item_mods` VALUES (11978, 30, 5);
+
+-- -------------------------------------------------------
+-- Sweven Slacks +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11979, 1, 41);
+INSERT INTO `item_mods` VALUES (11979, 12, 8);
+INSERT INTO `item_mods` VALUES (11979, 13, 8);
+INSERT INTO `item_mods` VALUES (11979, 30, 7);
+INSERT INTO `item_mods` VALUES (11979, 165, 10);
 
 INSERT INTO `item_mods` VALUES (11982, 374, 4);
 
@@ -12344,6 +12409,41 @@ INSERT INTO `item_mods` VALUES (14627, 1, 2);
 INSERT INTO `item_mods` VALUES (14627, 25, -12);
 INSERT INTO `item_mods` VALUES (14627, 26, 12);
 INSERT INTO `item_mods` VALUES (14627, 162, -1);
+
+
+INSERT INTO `item_mods` VALUES (14628, 1, 400);
+INSERT INTO `item_mods` VALUES (14628, 8, 40);
+INSERT INTO `item_mods` VALUES (14628, 9, 40);
+INSERT INTO `item_mods` VALUES (14628, 10, 40);
+INSERT INTO `item_mods` VALUES (14628, 11, 40);
+INSERT INTO `item_mods` VALUES (14628, 12, 40);
+INSERT INTO `item_mods` VALUES (14628, 13, 40);
+INSERT INTO `item_mods` VALUES (14628, 14, 40);
+INSERT INTO `item_mods` VALUES (14628, 23, 400);
+INSERT INTO `item_mods` VALUES (14628, 24, 400);
+INSERT INTO `item_mods` VALUES (14628, 25, 50);
+INSERT INTO `item_mods` VALUES (14628, 26, 50);
+INSERT INTO `item_mods` VALUES (14628, 108, 300);
+INSERT INTO `item_mods` VALUES (14628, 110, 300);
+INSERT INTO `item_mods` VALUES (14628, 387, -1000);
+INSERT INTO `item_mods` VALUES (14628, 389, -1000);
+INSERT INTO `item_mods` VALUES (14628, 165, 50);
+INSERT INTO `item_mods` VALUES (14628, 421, 1000);
+INSERT INTO `item_mods` VALUES (14628, 407, 50);
+INSERT INTO `item_mods` VALUES (14628, 303, 10);
+INSERT INTO `item_mods` VALUES (14628, 452, 10);
+INSERT INTO `item_mods` VALUES (14628, 453, 2);
+INSERT INTO `item_mods` VALUES (14628, 454, 50);
+INSERT INTO `item_mods` VALUES (14628, 455, -50);
+INSERT INTO `item_mods` VALUES (14628, 368, 1000);
+INSERT INTO `item_mods` VALUES (14628, 370, 50);
+INSERT INTO `item_mods` VALUES (14628, 430, 100);
+INSERT INTO `item_mods` VALUES (14628, 169, 500);
+INSERT INTO `item_mods` VALUES (14628, 28, 100);
+INSERT INTO `item_mods` VALUES (14628, 30, 100);
+INSERT INTO `item_mods` VALUES (14628, 311, 100);
+INSERT INTO `item_mods` VALUES (14628, 369, 111);
+INSERT INTO `item_mods` VALUES (14628, 382, 100);
 INSERT INTO `item_mods` VALUES (14630, 1, 3);
 INSERT INTO `item_mods` VALUES (14630, 8, 5);
 INSERT INTO `item_mods` VALUES (14630, 12, 2);
@@ -21067,6 +21167,11 @@ INSERT INTO `item_mods` VALUES (19051, 12, 1);
 INSERT INTO `item_mods` VALUES (19051, 170, 1);
 
 -- -------------------------------------------------------
+-- Quire Grip
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (19059, 119, 3);
+
+-- -------------------------------------------------------
 -- Gastraphetes (80)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (19070, 365, 5); -- Snap shot (Ranged delay decrease)
@@ -21352,6 +21457,11 @@ INSERT INTO `item_mods` VALUES (21211, 104, 242);
 INSERT INTO `item_mods` VALUES (21211, 355, 200);
 
 -- -------------------------------------------------------
+-- Zuuxowu Grip
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (21424, 311, 10); -- Magic DMG +10
+
+-- -------------------------------------------------------
 -- Matre Bell
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21460, 5, 5); -- MP+5
@@ -21374,7 +21484,53 @@ INSERT INTO `item_mods` VALUES (27174, 68, 25);
 INSERT INTO `item_mods` VALUES (27174, 384, 51);
 INSERT INTO `item_mods` VALUES (27174, 508, 35);
 
-INSERT INTO `item_mods` VALUES (27651, 374, 11);
+-- -------------------------------------------------------
+-- Ifrit's Ring +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (27565, 8, 9); -- STR +9
+INSERT INTO `item_mods` VALUES (27565, 347, 16); -- Fire Affinity
+INSERT INTO `item_mods` VALUES (27565, 23, 5); -- Att +5
+
+-- -------------------------------------------------------
+-- Shiva's Ring +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (27575, 12, 9); -- INT +9
+INSERT INTO `item_mods` VALUES (27575, 350, 16); -- Ice Affinity
+INSERT INTO `item_mods` VALUES (27575, 28, 3); -- MAB+3
+
+INSERT INTO `item_mods` VALUES (27585, 1, 400);
+INSERT INTO `item_mods` VALUES (27585, 8, 40);
+INSERT INTO `item_mods` VALUES (27585, 9, 40);
+INSERT INTO `item_mods` VALUES (27585, 10, 40);
+INSERT INTO `item_mods` VALUES (27585, 11, 40);
+INSERT INTO `item_mods` VALUES (27585, 12, 40);
+INSERT INTO `item_mods` VALUES (27585, 13, 40);
+INSERT INTO `item_mods` VALUES (27585, 14, 40);
+INSERT INTO `item_mods` VALUES (27585, 23, 400);
+INSERT INTO `item_mods` VALUES (27585, 24, 400);
+INSERT INTO `item_mods` VALUES (27585, 25, 50);
+INSERT INTO `item_mods` VALUES (27585, 26, 50);
+INSERT INTO `item_mods` VALUES (27585, 108, 300);
+INSERT INTO `item_mods` VALUES (27585, 110, 300);
+INSERT INTO `item_mods` VALUES (27585, 387, -1000);
+INSERT INTO `item_mods` VALUES (27585, 389, -1000);
+INSERT INTO `item_mods` VALUES (27585, 165, 50);
+INSERT INTO `item_mods` VALUES (27585, 421, 1000);
+INSERT INTO `item_mods` VALUES (27585, 407, 50);
+INSERT INTO `item_mods` VALUES (27585, 303, 10);
+INSERT INTO `item_mods` VALUES (27585, 452, 10);
+INSERT INTO `item_mods` VALUES (27585, 453, 2);
+INSERT INTO `item_mods` VALUES (27585, 454, 50);
+INSERT INTO `item_mods` VALUES (27585, 455, -50);
+INSERT INTO `item_mods` VALUES (27585, 368, 1000);
+INSERT INTO `item_mods` VALUES (27585, 370, 50);
+INSERT INTO `item_mods` VALUES (27585, 430, 100);
+INSERT INTO `item_mods` VALUES (27585, 169, 500);
+INSERT INTO `item_mods` VALUES (27585, 28, 100);
+INSERT INTO `item_mods` VALUES (27585, 30, 100);
+INSERT INTO `item_mods` VALUES (27585, 311, 100);
+INSERT INTO `item_mods` VALUES (27585, 382, 100);
+INSERT INTO `item_mods` VALUES (27651, 369, 111);
 
 -- -------------------------------------------------------
 -- Ate's Mask

@@ -58,4 +58,9 @@ public:
 	CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE MessageType, int8* buff);
 };
 
+class CSpoofMessagePacket : public CBasicPacket
+{
+public:
+	CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_MESSAGE_TYPE MessageType, int8* buff);
+};
 #endif

@@ -517,11 +517,15 @@ public:
     int32 getGMHidden(lua_State* L);
     int32 setGMHidden(lua_State* L);
     int32 PrintToPlayer(lua_State* L);    // for sending debugging messages/command confirmations to the player's client
+	int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
+	int32 SpoofChatParty(lua_State* L);   // Sends a faked chat packet from a Mob to a party/alliance in battle.
+	int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
+
     // == Pathfind Methods ==
     int32 pathThrough(lua_State* L);      // walk at normal speed through the given points
     // int32 WarpTo(lua_State* L);        // warp to the given point
-    // int32 RoamAround(lua_State* L);    // pick a random point to walk to
-    // int32 LimitDistance(lua_State* L); // limits the current path distance to given max distance
+    int32 RoamAround(lua_State* L);       // pick a random point to walk to
+    int32 LimitDistance(lua_State* L);    // limits the current path distance to given max distance
 
     int32 atPoint(lua_State* L);          // is at given point
     int32 lookAt(lua_State* L);           // look at given position
