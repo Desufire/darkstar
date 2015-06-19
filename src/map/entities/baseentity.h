@@ -29,6 +29,7 @@
 
 #include "../ai/ai_general.h"
 #include "../instance.h"
+#include "../packets/chat_message.h"
 
 enum ENTITYTYPE
 {
@@ -141,6 +142,7 @@ public:
 	STATUSTYPE		status;				// статус сущности (разные сущности - разные статусы)
 	uint16			m_TargID;			// targid объекта, на который смотрит сущность
 	string_t		name;				// имя сущности
+	string_t		ObjectName;			// NPC Tell name
 	look_t			look;				// внешний вид всех сущностей
 	look_t			mainlook;			// only used if mob use changeSkin() or player /lockstyle
 	location_t		loc;				// местоположение сущности
@@ -154,6 +156,8 @@ public:
 
 
 	virtual const int8* GetName();      // имя сущности
+
+	virtual const int8* GetObjectName();   // The entity name
 
 	uint16			getZone();			// текущая зона
 	float			GetXPos();			// позиция по координате X
