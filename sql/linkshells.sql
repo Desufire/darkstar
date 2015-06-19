@@ -40,7 +40,7 @@ CREATE TABLE `linkshells` (
 
 LOCK TABLES `linkshells` WRITE;
 /*!40000 ALTER TABLE `linkshells` DISABLE KEYS */;
-INSERT INTO `linkshells` VALUES (1,'Caladbolg',65535,'Sonja','We\'ve gotten a lot done/scripted. There\'s still a lot to do though. Be sure to join forums to stay informed!',1431500725,0),(2,'Order9of9Althyk9',61514,'Littlebox','Welcome to Caladbolg Server! Also, welcome to our private linkshell.',1428896037,0);
+INSERT INTO `linkshells` VALUES (1,'Caladbolg',65535,'Sonja','Abyssea now functional to an extent. Level 90+ jobs now have a place to exp. So much more to do though =/.',1434684700,0),(2,'Order9of9Althyk9',61514,'Littlebox','Welcome to Caladbolg Server! Also, welcome to our private linkshell.',1428896037,0);
 /*!40000 ALTER TABLE `linkshells` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-17 20:19:06
+-- Dump completed on 2015-06-19  3:51:24

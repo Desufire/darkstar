@@ -130,10 +130,11 @@ int32 init()
 	lua_register(LuaHandle,"UpdateNMSpawnPoint",luautils::UpdateNMSpawnPoint);
 	lua_register(LuaHandle,"SetDropRate",luautils::SetDropRate);
     lua_register(LuaHandle,"NearLocation",luautils::nearLocation);
-	lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
 
 	lua_register(LuaHandle,"getCorsairRollEffect",luautils::getCorsairRollEffect);
     lua_register(LuaHandle,"getSpell",luautils::getSpell);
+
+	lua_register(LuaHandle, "isValidLS", luautils::isValidLS);
 
     Lunar<CLuaAbility>::Register(LuaHandle);
 	Lunar<CLuaBaseEntity>::Register(LuaHandle);
@@ -4241,28 +4242,6 @@ inline int32 nearLocation(lua_State* L)
     return 1;
 }
 
-/************************************************************************
-*                                                                       *
-*  Check if a given linkshell exists by checking the name in database   *
-*                                                                       *
-************************************************************************/
-
-int32 isValidLS(lua_State* L)
-{
-    const int8* linkshellName = lua_tostring(L, 1);
-    const int8* Query = "SELECT name FROM linkshells WHERE name='Caladbolg'";
-    int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
-
-    if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-    {
-        lua_pushboolean(L, true);
-    }
-    else
-    {
-        lua_pushboolean(L, false);
-    }
-    return 1;
-}
 
 int32 OnPlayerLevelUp(CCharEntity* PChar)
 {

@@ -74,7 +74,7 @@ namespace luautils
     int32 isConquestAlliance(lua_State* L);
 	int32 SetRegionalConquestOverseers(uint8 regionID);							// Update NPC Conquest Guard
 	int32 setMobPos(lua_State*);												// set a mobs position (only if mob is not in combat)
-	
+
 	int32 getCorsairRollEffect(lua_State*);
     int32 getSpell(lua_State*);
 
@@ -190,6 +190,7 @@ namespace luautils
     int32 GetMobRespawnTime(lua_State* L);                                      // get the respawn time of a mob
 	int32 DeterMob(lua_State* L);                                               // Allow or prevent a mob from spawning
 	int32 UpdateNMSpawnPoint(lua_State* L);                                     // Update the spawn point of an NM
+	int32 isValidLS(lua_State*);                                                // Checks is LS exists
 	int32 SetDropRate(lua_State*);												// Set drop rate of a mob setDropRate(dropid,itemid,newrate)
 	int32 UpdateTreasureSpawnPoint(lua_State* L);                               // Update the spawn point of an Treasure
 	int32 UpdateServerMessage(lua_State*);										// update server message, first modify in conf and update
@@ -198,8 +199,7 @@ namespace luautils
     int32 OnSpikesDamage(CBattleEntity* PDefender, CBattleEntity* PAttacker, apAction_t* Action, uint32 damage);                         // for mobs with spikes
 
     int32 nearLocation(lua_State*);
-	int32 isValidLS(lua_State*);
-	
+
     int32 OnPlayerLevelUp(CCharEntity* PChar);
     int32 OnPlayerLevelDown(CCharEntity* PChar);
 

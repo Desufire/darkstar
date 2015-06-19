@@ -47,8 +47,8 @@ function OnMobRoam(mob)
         mob:AnimationSub(6);
 		--mob:wait(10);
     else
-        mob:hideName(true);
-        mob:untargetable(true);
+        mob:hideName(false);
+        mob:untargetable(false);
         mob:AnimationSub(6);
     end
 end;

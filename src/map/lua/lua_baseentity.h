@@ -76,9 +76,9 @@ public:
     {
         return m_PBaseEntity;
     }
-	
-	int32 AddLinkpearl(lua_State* L);		// Adds Pearl to new players automatically.
+
     int32 ChangeMusic(lua_State* L);        // Sets the specified music Track for specified music block.
+	int32 addLSpearl(lua_State* L);         // Adds LS to player
 
     int32 warp(lua_State*);                 // Returns Character to home point
     int32 leavegame(lua_State*);            // Character leaving game
@@ -524,8 +524,8 @@ public:
     // == Pathfind Methods ==
     int32 pathThrough(lua_State* L);      // walk at normal speed through the given points
     // int32 WarpTo(lua_State* L);        // warp to the given point
-    int32 RoamAround(lua_State* L);       // pick a random point to walk to
-    int32 LimitDistance(lua_State* L);    // limits the current path distance to given max distance
+    // int32 RoamAround(lua_State* L);    // pick a random point to walk to
+    // int32 LimitDistance(lua_State* L); // limits the current path distance to given max distance
 
     int32 atPoint(lua_State* L);          // is at given point
     int32 lookAt(lua_State* L);           // look at given position

@@ -108,4 +108,6 @@ function utils.inTable(table, element)
             return true
         end
     end
+
+end;
     return false

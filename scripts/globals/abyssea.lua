@@ -252,16 +252,16 @@ function getDemiluneAbyssite(player)
     return Demilune;
 end;
 
--- function WhatKilledMe(mob,target)
-	-- local Action = target:getCurrentAction();
-	-- if (Action == ACTION_WEAPONSKILL_START) then
-		-- target:setVar("Action",1);
-	-- elseif (Action == ACTION_MAGIC_CASTING) then
-		-- target:setVar("Action",2);
-	-- elseif (Action == ACTION_NONE) or (Action == ACTION_RANGED_START) then
-		-- target:setVar("Action",0);
-	-- end
--- end;
+function WhatKilledMe(mob,target)
+	local Action = target:getCurrentAction();
+	if (Action == ACTION_WEAPONSKILL_START) then
+		target:setVar("Action",1);
+	elseif (Action == ACTION_MAGIC_CASTING) then
+		target:setVar("Action",2);
+	elseif (Action == ACTION_NONE) or (Action == ACTION_RANGED_START) then
+		target:setVar("Action",0);
+	end
+end;
 
 -----------------------------------
 -- Calculating lights
@@ -297,12 +297,12 @@ function DoLights(mob,killer)
 		bonus = bonus;
 	end
 
-	-- if (action == 0) and (lightchance == 1) then
-		-- if (pearl > 230) then
-			-- killer:setVar("LightPearl",230);
-		-- else
-			-- killer:setVar("LightPearl",pearllight);
-		-- end
+	if (action == 0) and (lightchance == 1) then
+		if (pearl > 230) then
+			killer:setVar("LightPearl",230);
+		else
+			killer:setVar("LightPearl",pearllight);
+		end
 	--if (GetWeaponSkill() == true) and (lightchance == 1) then
 		--if (amber > 255) then
 		--	killer:setVar("LightAmber",255);
@@ -321,7 +321,7 @@ function DoLights(mob,killer)
 		-- else
 			-- killer:setVar("LightRuby",rubylight);
 		-- end
-	--end
+	end
 end;
 
 -----------------------------------

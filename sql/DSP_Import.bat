@@ -1,4 +1,4 @@
-cd c:\darkstar\sql
+cd d:\darkstar\sql
 del auction_house.sql
 del chars.sql
 del accounts.sql

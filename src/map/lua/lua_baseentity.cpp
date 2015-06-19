@@ -145,45 +145,6 @@ inline int32 CLuaBaseEntity::leavegame(lua_State *L)
 
 //==========================================================//
 
-inline int32 CLuaBaseEntity::AddLinkpearl(lua_State* L)
-{
-    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
-
-    const int8* linkshellName = lua_tostring(L, 1);
-    const int8* Query = "SELECT name FROM linkshells WHERE name='Caladbolg'";
-    int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
-
-    if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-    {
-        CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
-
-        std::string qStr = ("UPDATE char_inventory SET signature='Caladbolg");
-        qStr += linkshellName;
-        qStr += "' WHERE charid = " + std::to_string(PChar->id);
-        qStr += " AND itemId = 515 AND signature = 'Caladbolg'";
-        Sql_Query(SqlHandle, qStr.c_str());
-
-        Query = "SELECT linkshellid,color FROM linkshells WHERE name='Caladbolg'";
-        ret = Sql_Query(SqlHandle, Query, linkshellName);
-        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-        {
-            CItem* PItem = itemutils::GetItem(515);
-
-            // Update item with name & color //
-            int8 EncodedString[16];
-            EncodeStringLinkshell((int8*)linkshellName, EncodedString);
-            PItem->setSignature(EncodedString);
-            ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
-            ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
-            uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem);
-        }
-    }
-
-    return 1;
-}
-
-//==========================================================//
-
 inline int32 CLuaBaseEntity::ChangeMusic(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
@@ -199,6 +160,54 @@ inline int32 CLuaBaseEntity::ChangeMusic(lua_State *L)
 
     PChar->pushPacket(new CChangeMusicPacket(BlockID, MusicTrackID));
     return 0;
+}
+
+//======================================================//
+
+inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
+{
+	DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
+
+	const int8* linkshellName = lua_tostring(L, 1);
+	const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
+	int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
+
+	if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+	{
+		CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+		std::string qStr = ("UPDATE char_inventory SET signature='");
+		qStr += linkshellName;
+		qStr += "' WHERE charid = " + std::to_string(PChar->id);
+		qStr += " AND itemId = 515 AND signature = ''";
+		Sql_Query(SqlHandle, qStr.c_str());
+
+		Query = "SELECT linkshellid,color FROM linkshells WHERE name='%s'";
+		ret = Sql_Query(SqlHandle, Query, linkshellName);
+		if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			CItem* PItem = itemutils::GetItem(515);
+
+			// Update item with name & color //
+			int8 EncodedString[16];
+			EncodeStringLinkshell((int8*)linkshellName, EncodedString);
+			PItem->setSignature(EncodedString);
+			((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
+			((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
+			uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem);
+
+			// auto-equip it //
+			/* if (invSlotID != ERROR_SLOTID)
+			{
+			PItem->setSubType(ITEM_LOCKED);
+			PChar->equip[SLOT_LINK] = invSlotID;
+			PChar->equipLoc[SLOT_LINK] = LOC_INVENTORY;
+			linkshell::AddOnlineMember(PChar, (CItemLinkshell*)PItem);
+			} */
+		}
+	}
+
+	return 1;
 }
 
 //======================================================//
@@ -8705,6 +8714,90 @@ inline int32 CLuaBaseEntity::PrintToPlayer(lua_State* L)
 
     return 0;
 }
+
+inline int32 CLuaBaseEntity::SpoofChatPlayer(lua_State* L)
+{
+	DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+	DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
+
+	uint32 ObjectID = (uint32)lua_tointeger(L, 3);
+	CBaseEntity* Object = (CBaseEntity*)zoneutils::GetEntity(ObjectID, TYPE_MOB | TYPE_NPC);
+
+	if (m_PBaseEntity->objtype == TYPE_PC)
+	{
+		if (Object != NULL)
+		{
+			int8* ObjectName = (int8*)Object->GetObjectName();
+			CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
+			((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket((CCharEntity*)m_PBaseEntity, ObjectName, messageType, (char*)lua_tostring(L, 1)));
+		}
+		else
+		{
+			CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
+			((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
+		}
+	}
+	else
+	{
+		ShowError(CL_RED"Lua::SpoofChatPlayer: Tried to send message packets to a non player entity! \n" CL_RESET);
+	}
+
+	return 0;
+}
+
+inline int32 CLuaBaseEntity::SpoofChatParty(lua_State* L)
+{
+	DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+	DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
+
+	CMobEntity* PMob = (CMobEntity*)m_PBaseEntity;
+	CBaseEntity* Object = (CBaseEntity*)zoneutils::GetEntity(m_PBaseEntity->id, TYPE_MOB | TYPE_NPC);
+	CCharEntity* PChar = (CCharEntity*)PMob->GetEntity(PMob->m_OwnerID.targid, TYPE_PC);
+
+	if (PMob->objtype == TYPE_MOB)
+	{
+		if (PChar)
+		{
+			PChar->ForAlliance([Object, L](CBattleEntity* PPartyMember)
+			{
+				CCharEntity* PMember = (CCharEntity*)PPartyMember;
+				if (PMember->objtype == TYPE_PC)
+				{
+					int8* ObjectName = (int8*)Object->GetObjectName();
+					CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
+					PMember->pushPacket(new CSpoofMessagePacket(PMember, ObjectName, messageType, (char*)lua_tostring(L, 1)));
+				}
+			});
+		}
+		else
+		{
+			ShowError(CL_RED"Lua::SpoofChatParty: Couldn't find a player target to send message to! \n" CL_RESET);
+		}
+	}
+	else
+	{
+		ShowError(CL_RED"Lua::SpoofChatParty: Tried to send message from null or invalid entity type! \n" CL_RESET);
+	}
+	return 0;
+}
+
+inline int32 CLuaBaseEntity::SpoofChatServer(lua_State* L)
+{
+	DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+	DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
+
+	if (m_PBaseEntity->objtype == TYPE_PC)
+	{
+		CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_SYSTEM_1);
+		message::send(MSG_CHAT_SERVMES, 0, 0, new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
+	}
+	else
+	{
+		ShowError(CL_RED"Lua::SpoofChatServer: Tried to send message packets to a non player entity! \n" CL_RESET);
+	}
+	return 0;
+}
+
 /*
 Walk through the given points. NPC only.
 
@@ -9928,8 +10021,8 @@ const int8 CLuaBaseEntity::className[] = "CBaseEntity";
 
 Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 {
-	LUNAR_DECLARE_METHOD(CLuaBaseEntity,AddLinkpearl),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,ChangeMusic),
+	LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,warp),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,leavegame),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getID),
