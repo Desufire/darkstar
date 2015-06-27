@@ -3,3 +3,10 @@ Memory manager: Memory leaks found at 2015/05/13 21h03m26s.
 0001 : d:\darkstar\src\login\login.cpp line 338 size 10 address 0x01FD2A5C
 0002 : d:\darkstar\src\login\login.cpp line 350 size 10 address 0x01FD2A7C
 0003 : d:\darkstar\src\login\login.cpp line 391 size 11 address 0x01FD2A9C
+
+Memory manager: Memory leaks found at 2015/06/21 02h45m23s.
+0001 : d:\darkstar\src\map\map.cpp line 1200 size 5 address 0x024B0084
+0002 : d:\darkstar\src\map\map.cpp line 1204 size 10 address 0x024B00A4
+0003 : d:\darkstar\src\map\map.cpp line 1272 size 10 address 0x024B00E4
+0004 : d:\darkstar\src\common\strlib.cpp line 1004 size 1025 address 0x028ACE14
+0005 : d:\darkstar\src\common\sql.cpp line 75 size 1008 address 0x028B6E0C

@@ -36,7 +36,7 @@ CREATE TABLE `bcnm_info` (
 -- ----------------------------
 -- Records
 -- ----------------------------
-INSERT INTO `bcnm_info` VALUES ('0', '139', 'rank_2_mission', null, null, '1800', '25', '6', '0', '5');
+INSERT INTO `bcnm_info` VALUES ('0', '139', 'rank_2_mission', null, null, '1800', '0', '6', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('1', '139', 'tails_of_woe', null, null, '1800', '40', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('2', '139', 'dismemberment_brigade', null, null, '1800', '60', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('3', '139', 'the_secret_weapon', null, null, '1800', '99', '6', '0', '5');
@@ -63,7 +63,7 @@ INSERT INTO `bcnm_info` VALUES ('34', '140', 'wings_of_fury', null, null, '900',
 INSERT INTO `bcnm_info` VALUES ('35', '140', 'petrifying_pair', null, null, '900', '30', '3', '35', '15');
 INSERT INTO `bcnm_info` VALUES ('36', '140', 'toadal_recall', null, null, '1800', '30', '6', '36', '15');
 INSERT INTO `bcnm_info` VALUES ('37', '140', 'mirror_mirror', null, null, '900', '40', '3', '0', '7');
-INSERT INTO `bcnm_info` VALUES ('64', '144', 'rank_2_mission', null, null, '1800', '25', '6', '0', '5');
+INSERT INTO `bcnm_info` VALUES ('64', '144', 'rank_2_mission', null, null, '1800', '0', '6', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('65', '144', 'worms_turn', null, null, '1800', '40', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('66', '144', 'grimshell_shocktroopers', null, null, '1800', '60', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('67', '144', 'on_my_way', null, null, '1800', '99', '6', '0', '5');
@@ -85,7 +85,7 @@ INSERT INTO `bcnm_info` VALUES ('82', '144', 'prehistoric_pigeons', null, null, 
 INSERT INTO `bcnm_info` VALUES ('83', '144', 'palborough_project', null, null, '900', '0', '3', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('84', '144', 'shell_shocked', null, null, '1800', '0', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('85', '144', 'beyond_infinity', null, null, '600', '0', '6', '0', '6');
-INSERT INTO `bcnm_info` VALUES ('96', '146', 'rank_2_mission', null, null, '1800', '25', '6', '0', '5');
+INSERT INTO `bcnm_info` VALUES ('96', '146', 'rank_2_mission', null, null, '1800', '0', '6', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('97', '146', 'steamed_sprouts', null, null, '1800', '40', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('98', '146', 'divine_punishers', null, null, '1800', '60', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('99', '146', 'saintly_invitation', null, null, '1800', '99', '6', '0', '5');
@@ -163,7 +163,7 @@ INSERT INTO `bcnm_info` VALUES ('481', '203', 'class_reunion', null, null, '1800
 INSERT INTO `bcnm_info` VALUES ('482', '203', 'trial-size_trial_by_ice', null, null, '900', '20', '1', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('483', '203', 'waking_the_beast', null, null, '1800', '0', '18', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('484', '203', 'sugar-coated_directive', null, null, '1800', '80', '6', '0', '5');
-INSERT INTO `bcnm_info` VALUES ('512', '206', 'rank_5_mission', null, null, '900', '50', '6', '0', '5');
+INSERT INTO `bcnm_info` VALUES ('512', '206', 'rank_5_mission', null, null, '900', '0', '6', '0', '5');
 INSERT INTO `bcnm_info` VALUES ('513', '206', 'come_into_my_parlor', null, null, '1800', '0', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('514', '206', 'e-vase-ive_action', null, null, '1800', '0', '6', '0', '15');
 INSERT INTO `bcnm_info` VALUES ('515', '206', 'infernal_swarm', null, null, '1800', '0', '6', '0', '15');

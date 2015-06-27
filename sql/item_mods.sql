@@ -2032,6 +2032,8 @@ INSERT INTO `item_mods` VALUES (11076, 1, 37); -- def
 INSERT INTO `item_mods` VALUES (11076, 9, 10); -- dex
 INSERT INTO `item_mods` VALUES (11076, 384, 61); -- haste
 INSERT INTO `item_mods` VALUES (11076, 259, 5); -- dual wield
+INSERT INTO `item_mods` VALUES (11076, 302, 3); --
+INSERT INTO `item_mods` VALUES (11076, 288, 1); --
 
 INSERT INTO `item_mods` VALUES (11078, 369, 2);
 INSERT INTO `item_mods` VALUES (11082, 73, 7);
@@ -2084,6 +2086,8 @@ INSERT INTO `item_mods` VALUES (11096, 8, 12); -- str
 INSERT INTO `item_mods` VALUES (11096, 25, 17); -- accuracy
 INSERT INTO `item_mods` VALUES (11096, 23, 17); -- attack
 INSERT INTO `item_mods` VALUES (11096, 165, 5); -- crit rate
+INSERT INTO `item_mods` VALUES (11096, 288, 1); --
+INSERT INTO `item_mods` VALUES (11096, 416, 10); --
 
 INSERT INTO `item_mods` VALUES (11097, 73, 10);
 INSERT INTO `item_mods` VALUES (11099, 369, 2);
@@ -2127,6 +2131,8 @@ INSERT INTO `item_mods` VALUES (11116, 9, 10); -- dex
 INSERT INTO `item_mods` VALUES (11116, 11, 10); -- agi
 INSERT INTO `item_mods` VALUES (11116, 25, 8); -- accuracy
 INSERT INTO `item_mods` VALUES (11116, 68, 8); -- evasion
+INSERT INTO `item_mods` VALUES (11116, 288, 1); --
+INSERT INTO `item_mods` VALUES (11116, 28, 20); --
 
 -- -------------------------------------------------------
 -- Tantra Hose +2
@@ -2168,6 +2174,8 @@ INSERT INTO `item_mods` VALUES (11136, 1, 48); -- def
 INSERT INTO `item_mods` VALUES (11136, 25, 8); -- accuracy
 INSERT INTO `item_mods` VALUES (11136, 88, 5); -- katana skill
 INSERT INTO `item_mods` VALUES (11136, 384, 71); -- haste
+INSERT INTO `item_mods` VALUES (11136, 291, 20); --
+INSERT INTO `item_mods` VALUES (11136, 288, 1); --
 
 -- -------------------------------------------------------
 -- Tantra Gaiters +2
@@ -2213,6 +2221,9 @@ INSERT INTO `item_mods` VALUES (11156, 1, 23); -- def
 INSERT INTO `item_mods` VALUES (11156, 9, 5); -- dex
 INSERT INTO `item_mods` VALUES (11156, 8, 5); -- str
 INSERT INTO `item_mods` VALUES (11156, 384, 40); -- haste
+INSERT INTO `item_mods` VALUES (11156, 486, 20); --
+INSERT INTO `item_mods` VALUES (11156, 307, 1); --
+INSERT INTO `item_mods` VALUES (11156, 288, 1); --
 
 -- -------------------------------------------------------
 -- Tantra Crown +1

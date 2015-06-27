@@ -522,13 +522,13 @@ void CalculateStats(CMobEntity * PMob)
     }
 
     // apply custom roaming distance
-    if(PMob->getMobMod(MOBMOD_ROAM_DISTANCE) != 0)
+    if(PMob->getMobMod(MOBMOD_ROAM_DISTANCE) != 7)
     {
       PMob->m_roamDistance = (float)PMob->getMobMod(MOBMOD_ROAM_DISTANCE);
     }
 
     // Default roam distance if not set from database
-    if(PMob->m_roamDistance == 0)
+    if(PMob->m_roamDistance == 7)
     {
       if(PMob->m_Type & MOBTYPE_NOTORIOUS)
       {
