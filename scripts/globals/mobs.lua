@@ -10,6 +10,7 @@ require("scripts/globals/quests");
 require("scripts/globals/missions");
 require("scripts/globals/conquest");
 require("scripts/globals/status");
+require("scripts/globals/custom_trials");
 
 -----------------------------------
 --
@@ -39,4 +40,8 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
 	end
 
 	-- doMagiantTrialCheck(mob, killer, isKillShot, killType);
+	if (killer:getVar("CustomTrial") ~= nil) then
+		-- doCustomTrial(mob, killer, isKillShot, killType);
+		doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill);
+	end
 end;

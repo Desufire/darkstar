@@ -105,9 +105,8 @@ end;
 function utils.inTable(table, element)
     for aire, value in pairs(table) do -- "My life for Aire." /suchanerd
         if (value == element) then
-            return true
+            return true;
         end
     end
-
+    return false;
 end;
-    return false
