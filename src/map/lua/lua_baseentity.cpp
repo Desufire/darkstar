@@ -9092,14 +9092,14 @@ inline int32 CLuaBaseEntity::disableLevelSync(lua_State* L)
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
 
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
-    if (PChar->PParty && PChar->PParty->GetSyncTarget() == PChar)
-        PChar->PParty->DisableSync();
-        // Disabling @regen level sync exploit. This is temp till I come up with a better way.
-        CBattleEntity* PBattle = (CBattleEntity*)m_PBaseEntity;
-        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REGEN);
-        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REFRESH);
-        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REGAIN);
-
+    if (PChar->PParty)
+    {
+        if (PChar->PParty->GetSyncTarget() == PChar)
+            PChar->PParty->SetSyncTarget(nullptr, 553);
+        else
+            PChar->PParty->DisableSync();
+    }
+    
     PChar->loc.zone->PushPacket(PChar, CHAR_INRANGE, new CCharSyncPacket(PChar));
     return 0;
 }
@@ -9679,6 +9679,17 @@ inline int32 CLuaBaseEntity::getAllegiance(lua_State* L)
     return 1;
 }
 
+inline int32 CLuaBaseEntity::setAllegiance(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    ALLEGIANCETYPE allegiance = (ALLEGIANCETYPE)lua_tointeger(L, 1);
+
+    m_PBaseEntity->allegiance = allegiance;
+    return 0;
+}
+
 inline int32 CLuaBaseEntity::stun(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
@@ -10068,6 +10079,35 @@ inline int32 CLuaBaseEntity::getILvlMacc(lua_State *L)
     return 1;
 }
 
+inline int32 CLuaBaseEntity::getConfrontationEffect(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
+
+    lua_pushinteger(L, ((CBattleEntity*)m_PBaseEntity)->StatusEffectContainer->GetConfrontationEffect());
+    return 1;
+}
+
+inline int32 CLuaBaseEntity::copyConfrontationEffect(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
+
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    CBattleEntity* PEntity = (CBattleEntity*)m_PBaseEntity->GetEntity(lua_tointeger(L, 1), TYPE_PC | TYPE_MOB);
+
+    uint16 power = 0;
+
+    if (PEntity && PEntity->StatusEffectContainer->GetConfrontationEffect())
+    {
+        ((CBattleEntity*)m_PBaseEntity)->StatusEffectContainer->CopyConfrontationEffect(PEntity);
+        power = PEntity->StatusEffectContainer->GetConfrontationEffect();
+    }
+
+    lua_pushinteger(L, power);
+    return 1;
+}
 //==========================================================//
 
 const int8 CLuaBaseEntity::className[] = "CBaseEntity";
@@ -10486,6 +10526,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,spawn),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getCurrentAction),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getAllegiance),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,setAllegiance),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,stun),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,weaknessTrigger),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getBehaviour),
@@ -10505,5 +10546,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getRetrievableItemsForSlip),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,retrieveItemFromSlip),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getILvlMacc),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,getConfrontationEffect),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,copyConfrontationEffect),
     {nullptr,nullptr}
 };
