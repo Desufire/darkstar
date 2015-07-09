@@ -86,11 +86,6 @@ function CharCreate(player)
 	local hand = nil;
 	local feet = nil;
 	
-	if (isValidLS(("Caladbolg"))) then
-        if not(player:hasItem(515)) then
-            player:AddLinkpearl("Caladbolg");
-        end
-    end
 
 	-- ADD RACE SPECIFIC STARTGEAR
 	switch(race) : caseof

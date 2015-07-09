@@ -23,6 +23,7 @@ end;
 -----------------------------------
  
 function onTrigger(player,npc)
+	
 	--[[
 	Kills = GetServerVariable("[PH]Ix_aern_drk");
 		--print(Kills)
@@ -49,7 +50,7 @@ function onTrigger(player,npc)
 				SetDropRate(4397,1902,000);
 			end
 	end
-	]]--
+	--]]
 end;
 
 -----------------------------------
