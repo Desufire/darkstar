@@ -7,6 +7,7 @@ package.loaded["scripts/zones/Balgas_Dais/TextIDs"] = nil;
 -------------------------------------
 
 require("scripts/globals/keyitems");
+require("scripts/globals/missions");
 require("scripts/zones/Balgas_Dais/TextIDs");
 
 -----------------------------------

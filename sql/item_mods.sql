@@ -1325,9 +1325,9 @@ INSERT INTO `item_mods` VALUES (10563, 374, 5);
 -- Nares Trews
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (10564, 1, 42); -- DEF:42
-INSERT INTO `item_mods` VALUES (10554, 2, 4); -- HP+4%
-INSERT INTO `item_mods` VALUES (10554, 5, 4); -- MP+4%
-INSERT INTO `item_mods` VALUES (10554, 13, 14); -- MND+14
+INSERT INTO `item_mods` VALUES (10564, 2, 4); -- HP+4%
+INSERT INTO `item_mods` VALUES (10564, 5, 4); -- MP+4%
+INSERT INTO `item_mods` VALUES (10564, 13, 14); -- MND+14
 INSERT INTO `item_mods` VALUES (10564, 369, 1); -- Refresh
 INSERT INTO `item_mods` VALUES (10564, 374, 7); -- Cure Potency+7
 
