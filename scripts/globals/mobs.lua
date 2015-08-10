@@ -10,7 +10,6 @@ require("scripts/globals/quests");
 require("scripts/globals/missions");
 require("scripts/globals/conquest");
 require("scripts/globals/status");
-require("scripts/globals/custom_trials");
 
 -----------------------------------
 --
