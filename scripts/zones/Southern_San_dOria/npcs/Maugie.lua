@@ -37,7 +37,7 @@ function onTrigger(player,npc)
     if (grimySignpost == QUEST_AVAILABLE and player:getFameLevel(SANDORIA) >= 2) then
         player:startEvent(0x002d);
     elseif (grimySignpost == QUEST_ACCEPTED) then
-        if(player:getVar("CleanSignPost") == 15) then
+        if (player:getVar("CleanSignPost") == 15) then
             player:startEvent(0x002c);
         else
             player:startEvent(0x002b);
