@@ -9,6 +9,7 @@ del char_exp.sql
 del char_inventory.sql
 del char_jobs.sql
 del char_look.sql
+del char_merits.sql
 del char_pet.sql
 del char_pet_name.sql
 del char_points.sql
@@ -16,6 +17,7 @@ del char_profile.sql
 del char_skills.sql
 del char_stats.sql
 del char_storage.sql
+del char_style.sql
 del char_vars.sql
 del char_weapon_skill_points.sql
 del chars.sql
